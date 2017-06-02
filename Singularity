@@ -2,8 +2,8 @@ Bootstrap: docker
 From: ubuntu:16.04
 
 %runscript
-   echo "Running Emergent with arguments: $*"
-   exec emergent "$@"
+   echo "Running Emergent with arguments: --server --nogui $*"
+   exec emergent --server --nogui "$@"
 
 %post
    echo "Installing software and dependencies for the container."
