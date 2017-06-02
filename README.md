@@ -1,2 +1,13 @@
 # EmergentSingularity
-A simple Singularity configuration file to build Emergent 8.1.0 on top of Ubuntu 16.04. Bootstrapping this configuration to a Singularity image allows you to run emergent on any linux system.
+A simple Singularity configuration file to build Emergent 8.1.0 on top of Ubuntu 16.04. 
+Bootstrapping this configuration to a Singularity image allows you to run emergent on any OS.
+
+# Installation
+The installation process for Singularity can be found in the Singularity documentation:
+- For Mac head over [here](http://singularity.lbl.gov/install-mac)
+- For Windows head over [here](http://singularity.lbl.gov/install-windows)
+- For Linux head over [here](http://singularity.lbl.gov/install-linux)
+
+# Bootstraping the image
+After installation is complete follow the instructions [here](http://singularity.lbl.gov/bootstrap-image) to create and bootstrap the Singularity configuration to an image.
+Warning: If you wish to bootstrap the image yourself, you need to create an image of at least 5Go or you will get a `No space left on device` during compilation.
