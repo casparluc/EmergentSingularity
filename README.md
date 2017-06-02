@@ -11,3 +11,6 @@ The installation process for Singularity can be found in the Singularity documen
 # Bootstraping the image
 After installation is complete follow the instructions [here](http://singularity.lbl.gov/bootstrap-image) to create and bootstrap the Singularity configuration to an image.
 Warning: If you wish to bootstrap the image yourself, you need to create an image of at least 5Go or you will get a `No space left on device` during compilation.
+
+# Downloading the image
+A fully build image is readiliy available on [Singularity Hub](https://singularity-hub.org/collections/178/) and will automatically be kept up to date.
