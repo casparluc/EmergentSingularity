@@ -3,12 +3,17 @@ From: ubuntu:16.04
 
 %runscript
    echo "Running Emergent with arguments: $*"
+   export LIBGL_ALWAYS_SOFTWARE=1
+   export LD_LIBRARY_PATH=/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu/mesa:$LD_LIBRARY_PATH
+   printenv
    exec emergent "$@"
 
 %post
+   echo "export LIBGL_ALWAYS_SOFTWARE=1" >> /environment
+   echo "export LD_LIBRARY_PATH=/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu/mesa:$LD_LIBRARY_PATH" >> /environment
    echo "Installing software and dependencies for the container."
    apt-get update
-   apt-get install -y libglu1-mesa libgl1-mesa-glx  xserver-xorg-video-dummy xserver-xorg-video-vesa xserver-xorg-video-intel qt5-default qttools5-dev libqt5webkit5-dev qtlocation5-dev libqt5designer5 qtdeclarative5-dev libqt5sensors5-dev qtmultimedia5-dev libqt5svg5-dev libcoin80-dev cmake g++ libreadline6-dev libgsl0-dev zlib1g-dev libpng12-dev libjpeg-dev libncurses5-dev libsvn-dev libsndfile1-dev mercurial python-pip subversion devscripts csh pkg-config libode-dev
+   apt-get install -y libgnomeui-0 libcanberra-gtk0 libglu1-mesa libgl1-mesa-glx qt5-default qttools5-dev libqt5webkit5-dev qtlocation5-dev libqt5designer5 qtdeclarative5-dev libqt5sensors5-dev qtmultimedia5-dev libqt5svg5-dev libcoin80-dev cmake g++ libreadline6-dev libgsl0-dev zlib1g-dev libpng12-dev libjpeg-dev libncurses5-dev libsvn-dev libsndfile1-dev mercurial python-pip subversion devscripts csh pkg-config libode-dev
    
    echo "Checkout lastest version of emergent."
    svn checkout https://grey.colorado.edu/svn/emergent/emergent/trunk ~/emergent
