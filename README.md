@@ -14,4 +14,3 @@ Warning: If you wish to bootstrap the image yourself, you need to create an imag
 
 # Downloading the image
 A fully build image is readiliy available on [Singularity Hub](https://singularity-hub.org/collections/178/) and will automatically be kept up to date.
-
