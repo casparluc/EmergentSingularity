@@ -3,6 +3,7 @@ From: ubuntu:16.04
 
 %runscript
    echo "Running Emergent with arguments: $*"
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib64:/opt/cuda/include:/opt/cuda/lib64
    exec emergent "$@"
 
 %post
