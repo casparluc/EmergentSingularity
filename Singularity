@@ -29,7 +29,7 @@ From: ubuntu:16.04
 
    echo "Compile emergent."
    cd build
-   make -j 4
+   make -j 8
    if [ $? -gt 0 ]; then exit 1;fi
    
    echo "Install emergent."
