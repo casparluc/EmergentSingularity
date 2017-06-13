@@ -1,6 +1,6 @@
 # EmergentSingularity
-A simple Singularity configuration file to build a headless (running a TCP server without GUI) version of Emergent 8.1.0 on top of Ubuntu 16.04. 
-Bootstrapping this configuration to a Singularity image allows you to run emergent server on any OS.
+A simple Singularity configuration file to build a headless, non-interactive (without GUI, only good for start-up cluster jobs) version of Emergent 8.1.0 on top of Ubuntu 16.04. 
+Bootstrapping this configuration to a Singularity image allows you to run emergent on any OS.
 
 # Installation
 The installation process for Singularity can be found in the Singularity documentation:
